@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
-// Uncomment when implementing routes
-// const router = require('./routes');
+const router = require('./routes');
 
 app.use(express.static(__dirname + '/../client'));
 app.port = process.env.PORT || 3000;

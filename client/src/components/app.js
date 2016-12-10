@@ -1,4 +1,5 @@
 import React from 'react';
+import {Home} from './Home.jsx';
 
 class App extends React.Component {
   constructor(props) {
