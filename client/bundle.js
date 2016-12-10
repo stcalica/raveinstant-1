@@ -26399,7 +26399,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Home = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Home.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Home = __webpack_require__(236);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26418,17 +26418,18 @@
 	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	  }
 
+	  // Come back to this render code to edit in case the user 
+	  // knows the specific endpoint they want to go, 
+	  // otherwise, take them straight to 'Home'.
+	  // Right now, the code will automatically take them 'Home'.
+
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'TESTING'
-	        )
+	        _react2.default.createElement(_Home.Home, null)
 	      );
 	    }
 	  }]);
@@ -26437,6 +26438,124 @@
 	}(_react2.default.Component);
 
 	exports.default = App;
+
+/***/ },
+/* 235 */,
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Home = undefined;
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Home = exports.Home = function Home(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'text-center' },
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Rave Instant'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Never wait again.'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: 'Store' },
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn-success btn-lg' },
+	            'Click here to see our products'
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-4' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'text-center' },
+	            _react2.default.createElement('span', { className: 'glyphicon glyphicon-ok', 'aria-hidden': 'true' }),
+	            _react2.default.createElement('br', null),
+	            'Why wait?'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'Rather than anxiously wondering whether the package will arrive on time for the show, we deliver it directly to you at the venue or the festival.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-4' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'text-center customGreen' },
+	            _react2.default.createElement('span', { className: 'glyphicon glyphicon-send', 'aria-hidden': 'true' }),
+	            _react2.default.createElement('br', null),
+	            'We ship'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'If you would like the package to be delivered to another location, we also do dropshipping. Doesn\'t matter where, we\'ll get you your gear.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-4' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'text-center customGreen' },
+	            _react2.default.createElement('span', { className: 'glyphicon glyphicon-wrench', 'aria-hidden': 'true' }),
+	            _react2.default.createElement('br', null),
+	            'Issues?'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'Run into problems with our site? We\'re still under construction. Just bug us and we\'ll fix it (someday).'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
 
 /***/ }
 /******/ ]);
