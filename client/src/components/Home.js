@@ -15,7 +15,7 @@ export let Home = function (props) {
         </div>
 
         <p>
-          <Link to="Store"><button className="btn-success btn-lg">Click here to see our products</button></Link>
+          <Link to="store"><button className="btn-success btn-lg">Click here to see our products</button></Link>
         </p>
       </div>
 

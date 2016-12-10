@@ -1,7 +1,7 @@
 import React from 'react';
 import {Home} from './Home.js';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,12 +13,18 @@ class App extends React.Component {
   // Right now, the code will automatically take them 'Home'.
 
   render() {
-    return (
-      <div>
-        <Home />
-      </div>
-    );
+    if (this.props.children) {
+      return (
+        <div>
+          {this.props.children}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Home />
+        </div>
+      );
+    }
   }
 }
-
-export default App;

@@ -20,7 +20,7 @@ npm install
 
 Initiate webpack.
 ```sh
-npm run build: dev
+npm run build:dev
 ```
 
 Initiate nodemon.
