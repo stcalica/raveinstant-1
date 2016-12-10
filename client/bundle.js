@@ -26402,6 +26402,8 @@
 
 	var _Home = __webpack_require__(236);
 
+	var _Navbar = __webpack_require__(239);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26431,12 +26433,14 @@
 	        return _react2.default.createElement(
 	          'div',
 	          null,
+	          _react2.default.createElement(_Navbar.Navbar, null),
 	          this.props.children
 	        );
 	      } else {
 	        return _react2.default.createElement(
 	          'div',
 	          null,
+	          _react2.default.createElement(_Navbar.Navbar, null),
 	          _react2.default.createElement(_Home.Home, null)
 	        );
 	      }
@@ -26593,13 +26597,18 @@
 
 	var _Store2 = _interopRequireDefault(_Store);
 
+	var _Cart = __webpack_require__(240);
+
+	var _Cart2 = _interopRequireDefault(_Cart);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _app2.default },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'store', component: _Store2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'store', component: _Store2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'cart', component: _Cart2.default })
 	);
 
 /***/ },
@@ -26651,9 +26660,33 @@
 	      return _react2.default.createElement(
 	        "div",
 	        null,
-	        _react2.default.createElement("div", { id: "myItem1" }),
-	        _react2.default.createElement("div", { id: "myItem2" }),
-	        _react2.default.createElement("div", { id: "myItem3" })
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem1" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem2" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem3" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -26662,6 +26695,195 @@
 	}(_react2.default.Component);
 
 	exports.default = Store;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Navbar = undefined;
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Navbar = exports.Navbar = function Navbar(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'nav',
+	      { className: 'navbar navbar-inverse' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'container-fluid' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'navbar-header' },
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#myNavbar' },
+	            _react2.default.createElement('span', { className: 'icon-bar' }),
+	            _react2.default.createElement('span', { className: 'icon-bar' }),
+	            _react2.default.createElement('span', { className: 'icon-bar' })
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            _react2.default.createElement(
+	              'a',
+	              { className: 'navbar-brand' },
+	              'Rave Instant'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'collapse navbar-collapse', id: 'myNavbar' },
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'nav navbar-nav' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: 'store' },
+	                'Store'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: 'cart' },
+	                'Cart'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'nav navbar-nav navbar-right' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: '#' },
+	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-user' }),
+	                ' Sign Up'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: '#' },
+	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-log-in' }),
+	                ' Login'
+	              )
+	            )
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Cart = function (_React$Component) {
+	  _inherits(Cart, _React$Component);
+
+	  function Cart(props) {
+	    _classCallCheck(this, Cart);
+
+	    var _this = _possibleConstructorReturn(this, (Cart.__proto__ || Object.getPrototypeOf(Cart)).call(this, props));
+
+	    _this.state = {
+	      addedItems: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Cart, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      console.log(this.addedItems);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem1" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem2" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "myItem3" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "There will be a thing here"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Cart;
+	}(_react2.default.Component);
+
+	exports.default = Cart;
 
 /***/ }
 /******/ ]);

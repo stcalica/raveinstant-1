@@ -1,5 +1,6 @@
 import React from 'react';
 import {Home} from './Home.js';
+import {Navbar} from './Navbar.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -16,12 +17,14 @@ export default class App extends React.Component {
     if (this.props.children) {
       return (
         <div>
+          <Navbar />
           {this.props.children}
         </div>
       );
     } else {
       return (
         <div>
+          <Navbar />
           <Home />
         </div>
       );

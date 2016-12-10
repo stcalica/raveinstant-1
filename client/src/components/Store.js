@@ -16,15 +16,15 @@ export default class Store extends React.Component {
     return (
       <div>
         <div id="myItem1">
-
+          <p>There will be a thing here</p>
         </div>
 
         <div id="myItem2">
-        
+          <p>There will be a thing here</p>
         </div>
 
         <div id="myItem3">
-        
+          <p>There will be a thing here</p>
         </div>
 
       </div>
